@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #022c22 0%, #020617 55%, #000000 100%);
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* Header */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #facc15;
+}
+
+.site-header nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+}
+
+.site-header nav a:hover {
+    color: #facc15;
+}
+
+.btn-nav {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #facc15;
+}
+
+/* this is for all buttons */
+
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: #facc15;
+    color: #111827;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background: rgba(15, 23, 42, 0.8);
+    color: #e5e7eb;
+    border: 1px solid #6ee7b7;
+}
+
+.btn-secondary:hover {
+    background: rgba(15, 23, 42, 1);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #facc15;
+    border: 1px solid #facc15;
+}
+
+.btn-outline:hover {
+    background: rgba(250, 204, 21, 0.1);
+}
+
+/* here is the background image with the birds */
+
+.hero-with-image {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: #f9fafb;
+    overflow: hidden;
+}
+
+.hero-with-image {
+    background:
+        linear-gradient(120deg, rgba(8, 47, 73, 0.8), rgba(30, 64, 175, 0.6)),
+        url("img/hero-parrots.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.85));
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: #e5e7eb;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+/* genberal layout for the website */
+
+.content {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Highlight striip */
+
+.highlight-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.highlight-card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.highlight-card h2 {
+    color: #facc15;
+    margin-bottom: 0.5rem;
+}
+
+/* Here is the mission statement grid. This is for all the general information Birds of Sanctuary services */
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.mission-image-card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.mission-image-card img {
+    width: 100%;
+    display: block;
+}
+
+.mission-text h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.mission-text p {
+    margin-bottom: 0.75rem;
+}
+
+/* The big one. This is for the parrots */
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-intro {
+    margin-bottom: 1.5rem;
+    color: #cbd5f5;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border-color: #facc15;
+}
+
+.bird-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* SPONSOR PAGE */
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #4b5563;
+    background: rgba(15, 23, 42, 0.8);
+    color: #e5e7eb;
+}
+
+.order-form button {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+#totalPrice {
+    margin: 0.5rem 0;
+    font-weight: 600;
+    color: #facc15;
+}
+
+.sponsor-image-card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.sponsor-image-card img {
+    width: 100%;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+/* footer shenanigans */
+
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2.5rem;
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid #1f2937;
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 768px) {
+    .mission-grid,
+    .sponsor-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+}
+
+/* Collapsible "Why Your Help Matters" panel */
+.help-panel {
+    margin-top: 1.2rem;
+    background: rgba(15, 23, 42, 0.95);
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    padding: 1rem 1.2rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+/* When open */
+.help-panel.open {
+    max-height: 600px; /* big enough to show all the text */
+    opacity: 1;
+}
+
+.help-panel ul {
+    list-style: none;           /* remove default dots */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.help-panel ul li {
+    position: relative;
+    padding-left: 1.6rem;       /* space for custom bullet */
+    margin-bottom: 0.5rem;
+}
+
+.help-panel ul li::before {
+    content: "•";               /* or use a custom symbol */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fbbf24;             /* gold-yellow accent */
+    font-size: 1.2rem;
+    line-height: 1;
+}

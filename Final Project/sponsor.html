@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sponsor a Bird - Birds of Paradise Sanctuary &amp; Rescue</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+    <h1>Sponsor a Bird</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="parrots.html">Our Parrots</a>
+        <a href="sponsor.html">Sponsor a Bird</a>
+    </nav>
+</header>
+
+<main class="content">
+    <h2>Choose a Care Package</h2>
+    <p>
+        Your sponsorship helps provide food, toys, and medical care for the parrots living
+        at Birds of Paradise Sanctuary &amp; Rescue.
+    </p>
+
+    <form id="sponsorForm" action="sponsor_process.php" method="post" class="order-form">
+        <label>
+            Your Name:
+            <input type="text" name="supporter_name" required>
+        </label>
+
+        <label>
+            Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
+            Care Package:
+            <select name="package_id" id="packageSelect" required>
+                <option value="">-- Select a package --</option>
+                <option value="1" data-price="25.00">Essentials Pack - $25.00</option>
+                <option value="2" data-price="50.00">Wellness Pack - $50.00</option>
+                <option value="3" data-price="35.00">Enrichment Pack - $35.00</option>
+            </select>
+        </label>
+
+        <label>
+            Quantity:
+            <input type="number" name="quantity" id="quantity" min="1" value="1" required>
+        </label>
+
+        <p id="totalPrice">Total: $0.00</p>
+
+        <button type="submit">Submit Sponsorship</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Panda Website Development (Wes Williams)</p>
+</footer>
+</body>
+</html>
